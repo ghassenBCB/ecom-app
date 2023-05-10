@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="template :: head_template"/>
+<body>
+    <div th:replace="template :: navbar" />
+    <table class="table">
+        <tr>
+            <th>Id</th> <th>Name</th> <th>Price</th>
+        </tr>
+        <tr th:each="p:${products}">
+            <td th:text="${p.id}"></td>
+            <td th:text="${p.name}"></td>
+            <td th:text="${p.price}"></td>
+        </tr>
+    </table>
+
+
+
+</body>
+</html>
